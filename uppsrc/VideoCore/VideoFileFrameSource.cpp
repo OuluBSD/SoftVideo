@@ -1,6 +1,6 @@
 #include "VideoCore.h"
 
-#if defined(flagFFMPEG) || defined(_WIN32)
+#if defined(flagFFMPEG)
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
@@ -11,7 +11,7 @@ extern "C" {
 
 namespace Upp {
 
-#if defined(flagFFMPEG) || defined(_WIN32)
+#if defined(flagFFMPEG)
 
 struct VsmVideoFileFrameSource::Data {
 	AVFormatContext* fmt_ctx = nullptr;
