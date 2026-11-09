@@ -1,0 +1,21 @@
+description "VideoServer stream recorder";
+
+uses
+	Core,
+	Draw,
+	VideoCore,
+	plugin/jpg;
+
+library(MSC) "avformat.lib avcodec.lib avutil.lib swscale.lib delayimp.lib";
+
+link(WIN32 MSC) "/DELAYLOAD:avformat-62.dll /DELAYLOAD:avcodec-62.dll /DELAYLOAD:avutil-60.dll /DELAYLOAD:swscale-9.dll";
+
+library(!WIN32) "avformat avcodec avutil swscale";
+
+file
+	AGENTS.md,
+	VideoRecorder.h,
+	main.cpp;
+
+mainconfig
+	"" = "";

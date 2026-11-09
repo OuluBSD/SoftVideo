@@ -1,0 +1,12 @@
+uses
+	Core,
+	Draw,
+	CtrlLib,
+	VideoCore,
+	RasterPlayer;
+
+file
+	main.cpp;
+
+mainconfig
+	"" = "STDEXC STDRTTI";

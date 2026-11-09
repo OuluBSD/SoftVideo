@@ -1,0 +1,17 @@
+description "VideoCore: headless image buffers, frame source interfaces, and streaming protocols";
+
+uses
+	Core,
+	Draw,
+	plugin/jpg,
+	plugin/png;
+
+file
+	VideoCore.h,
+	ImageBuffer.h,
+	ImageBuffer.cpp,
+	FrameSource.h,
+	VideoServerFrameSource.h,
+	VideoServerFrameSource.cpp,
+	VideoFileFrameSource.h,
+	VideoFileFrameSource.cpp;

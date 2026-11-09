@@ -1,0 +1,21 @@
+description "VideoServer - Remote Video Capture Server\377";
+
+uses
+	Core,
+	Draw,
+	VideoCore,
+	plugin/jpg;
+
+library(LINUX) "v4l2 pthread X11";
+
+library(WIN32 MSC) "mf.lib mfplat.lib mfreadwrite.lib mfuuid.lib ole32.lib user32.lib rpcrt4.lib";
+
+library(WIN32 CLANG) "mf mfplat mfreadwrite mfuuid ole32 user32 rpcrt4";
+
+file
+	AGENTS.md,
+	main.cpp;
+
+mainconfig
+	"" = ".FFMPEG",
+	"Release" = ".FFMPEG";
