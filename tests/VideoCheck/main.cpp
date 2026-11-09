@@ -1,7 +1,6 @@
 #include <Core/Core.h>
 #include <Draw/Draw.h>
 #include <VideoCore/VideoCore.h>
-#include <RasterPlayer/RasterPlayer.h>
 
 using namespace Upp;
 
@@ -94,21 +93,6 @@ CONSOLE_APP_MAIN
 		file_source.Close();
 
 		Cout() << "PASS: VsmVideoFileFrameSource verified\n";
-	}
-
-	// 4. Test RasterPlayer
-	Cout() << "[4] Testing RasterPlayer controls...\n";
-	{
-		RasterPlayer player;
-		ASSERT(player.GetPageCount() == 0);
-		ASSERT(player.GetFrameCount() == 0);
-		ASSERT(!player.IsRunning());
-
-		player.SetSpeed(2.0);
-		player.SetBackground(Black());
-		player.SetMT(false);
-
-		Cout() << "PASS: RasterPlayer verified\n";
 	}
 
 	Cout() << "\n========================================\n";

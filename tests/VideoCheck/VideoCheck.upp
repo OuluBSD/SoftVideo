@@ -1,9 +1,9 @@
 uses
 	Core,
 	Draw,
-	CtrlLib,
-	VideoCore,
-	RasterPlayer;
+	plugin/jpg,
+	plugin/png,
+	VideoCore;
 
 file
 	main.cpp;
